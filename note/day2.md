@@ -126,6 +126,7 @@ public class Examples {
 		System.out.println("만원 : "+man);
 		System.out.println("오천원 : "+ochun);
 		System.out.println("천원 : "+chun);
+
 		System.out.println("오백원 : "+obaek);
 		System.out.println("백원 : "+baek);
 		System.out.println("십원 : "+sip);
@@ -155,21 +156,19 @@ public class Examples {
 public class Examples {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int i = 0;
-		while (i < 10) {
-			System.out.print("세 개의 숫자를 입력하시오. : ");
-			int num1 = sc.nextInt();
-			int num2 = sc.nextInt();
-			int num3 = sc.nextInt();
+		System.out.print("세 개의 숫자를 입력하시오. : ");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		int num3 = sc.nextInt();
 
-			int max = num1 > num2 ? num1 > num3 ? num1 : num3 : num2 > num3 ? num2 : num3;
-			int mid = num1==max? num2>num3?num2:num3
-					:num2==max? num1>num3?num1:num3
-							:num1>num2?num1:num2;
+    // max: 세 수 중 최댓값
+		int max = num1 > num2 ? num1 > num3 ? num1 : num3 : num2 > num3 ? num2 : num3;
+    // mid: max를 제외한 두 수 중 최댓값
+    int mid = num1==max? num2>num3? num2:num3
+				:num2==max? num1>num3? num1:num3
+						:num1>num2? num1:num2;
 
-			System.out.println("중간값: " + mid);
-			i++;
-		}
+		System.out.println("중간값: " + mid);
 	}
 }
 ~~~
