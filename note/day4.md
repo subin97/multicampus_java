@@ -235,13 +235,24 @@ public class Employee {
 // EmployeeTest.java
 public class EmployeeTest {
 	public static void main(String[] args) {
-		Employee ee = new Employee();
-		ee.setName("최수빈");
-		ee.setSalary(7000);
-		ee.setPosition("부장");
-
-		System.out.println(ee);
+		Scanner sc = new Scanner(System.in);
+		Employee[] empArr = new Employee[3];
+		for (int i = 0; i < empArr.length; i++) {
+			empArr[i] = new Employee();
+			System.out.print("직원"+(i+1)+"의 이름 : ");
+			empArr[i].setName(sc.nextLine());
+			System.out.print("직원"+(i+1)+"의 연봉 : ");
+			empArr[i].setSalary(sc.nextInt());
+			sc.nextLine();
+			// nextInt : 4byte만을 읽음(enter키 남겨놓음)
+			// nextInt : enter를 포함하여 모두 가져감
+			// nextInt를 호출한 후 nextLine호출하면
+			// enter만을 가져가기 때문에
+			// nextInt후에 nextLine을 한 번 더 해줘야 함
+			System.out.print("직원"+(i+1)+"의 직급 : ");
+			empArr[i].setPosition(sc.nextLine());
+			System.out.println();
+		}
 	}
 }
-
 ~~~
