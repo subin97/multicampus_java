@@ -36,7 +36,7 @@
   2. 참조형 : heap에 저장, 동적 메모리 할당
     - 나머지 전부
     - 동적할당 : new 키워드 사용
-      ~~~
+      ~~~java
       Scanner scan=new Scanner(System.in);
       ~~~
 
@@ -48,7 +48,7 @@
 ### 입력
 - 사용자의 입력을 받을 때는 Scanner 이용
 
-~~~
+~~~java
 import java.util.Scanner;
 
 public class Helloworld {
@@ -70,7 +70,7 @@ public class Helloworld {
 ### 예제
 - 사용자로부터 원화를 입력받고 달러값으로 변환하여 출력하여라. 환율은 1118.70이다.
 
-~~~
+~~~java
 import java.util.Scanner;
 
 public class money {

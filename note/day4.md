@@ -2,7 +2,7 @@
 ***
 ### 배열 예제
 - 랜덤한 로또번호 중복없이 뽑기
-~~~
+~~~java
 public class Lotto {
 	public static void main(String[] args) {
 		// 1~45 사이의 랜덤한 숫자를 하나 뽑는다.
@@ -30,7 +30,8 @@ public class Lotto {
 			System.out.print(lottoNum[i]+" ");
 	}
 }
-~~~
+~~~    
+
 ### 객체 지향 프로그래밍
 - 절차 지향 : 구조체와 함수가 별도로 존재
   - Fortran, Cobol, C
@@ -73,7 +74,7 @@ public class Lotto {
 - Overloading의 조건 : 다음의 조건을 모두 만족해야 한다.
   1. 메서드 이름이 같아야 한다.
   2. 매개변수의 개수 또는 타입이 달라야 한다.
-  ~~~
+  ~~~java
   class Car{
   	public int speed;
   	public int mileage;
@@ -126,7 +127,7 @@ public class Lotto {
 2. 접근자(Getter)
   - 반환 유형이 내가 getter가 되고자 하는 필드의 타입
   - 이름은 getXXX(ex: getSpeed)
-~~~
+~~~java
   class Car{
 	   private int mileage;    // private 멤버 변수
 
@@ -151,7 +152,7 @@ public class Lotto {
   1. 클래스의 속성과 생성자/메서드의 매개변수의 이름이 같을 때(위의 예시의 경우)
   2. 클래스에 오버로딩된 다른 생성자 호출
 
-  ~~~
+  ~~~java
   public class Fruit {
   	private String name;
   	private String color;
@@ -173,7 +174,7 @@ public class Lotto {
   ~~~
   3. 객체 자신의 참조하고 싶을 때
 
-  ~~~
+  ~~~java
   public class Fruit {
   	private String name;
   	private String color;
@@ -198,7 +199,7 @@ public class Lotto {
 > 이름, 연봉, 직급을 저장할 수 있고 각 필드에 대해 getter setter method 정의 /
 그리고 전체 객체의 상태값을 한 눈에 파악할 수 있는 적절한 toString method를 정의
 
-~~~
+~~~java
 // Employee.java
 public class Employee {
 	private String name;
@@ -230,7 +231,7 @@ public class Employee {
 	}
 }
 ~~~
-~~~
+~~~java
 // EmployeeTest.java
 public class EmployeeTest {
 	public static void main(String[] args) {

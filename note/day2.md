@@ -23,7 +23,7 @@
   - 작은 타입의 데이터와 큰 타입의 데이터 사이의 연산이 일어날 때, 작은 타입의 데이터를 큰 타입으로 자동변환시킴
 - 명시적 형변환
   - 큰 타입의 데이터를 작은 타입의 변수에 담기 위해서는 강제로 작은 타입으로 형변환해주어야 함(데이터 손실)
-  ~~~
+  ~~~java
   public class ArithmeticOper {
   	public static void main(String[] args) {
   		// 계산 결과가 정수인 값을 저장할 변수
@@ -44,7 +44,7 @@
 
 ### 연산자
 - 단항연산자
-~~~
+~~~java
 public class ArithmeticOper {
 	public static void main(String[] args) {
 		int x=0;
@@ -90,7 +90,7 @@ public class ArithmeticOper {
 
 ### 실습예제
 1. 사용자로부터 연도를 입력받아서 윤년여부를 판단 후 출력하는 프로그램을 작성하여라. 4로 나누어 떨어지면서 100으로 나누어 떨어지지 않는 경우, 혹은 400의 공배수인 경우 윤년이다.
-~~~
+~~~java
 public class Examples {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -105,7 +105,7 @@ public class Examples {
 ~~~
 
 2. 사용자로부터 상품 금액을 입력받아서 큰 단위부터 각각 만원 오천원 천원 오백원 백원 십원이 몇 개씩 필요한지 출력하여라
-~~~
+~~~java
 public class Examples {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -135,7 +135,7 @@ public class Examples {
 ~~~
 
 3. 사용자로부터 세 개의 숫자를 입력받아서 가장 큰 수를 출력하는 프로그램을 작성하시오.
-~~~
+~~~java
 public class Examples {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -152,7 +152,7 @@ public class Examples {
 }
 ~~~
 4. 사용자로부터 세 개의 숫자를 입력받아 중간 크기의 숫자를 출력하는 프로그램을 작성하여라.
-~~~
+~~~java
 public class Examples {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

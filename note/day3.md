@@ -4,7 +4,7 @@
 - 예제4) 사용자로부터 세 개의 수를 입력받아 중간값을 구하여라.
 - sol2) 세 수 중 두 수씩 묶어 최댓값 3개를 만든 다음, max1,2,3중 최솟값을 구한다.
 
-~~~
+~~~java
 import java.util.Scanner;
 public class Example1 {
 	public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class Example1 {
 - 여러 개의 case를 작성할 경우 case 1: case 2: 와 같이 이어쓰면 가능
 - 가위 바위 보 예제: 결과값을 빼서 가장 효율적으로 계산   
 
-~~~
+~~~java
 import java.util.Scanner;
 
 public class RSP {
@@ -72,7 +72,7 @@ public class RSP {
 
 ### 조건문 예제
 - if문
-~~~
+~~~java
 public class Ex_if {
 	public static void main(String[] args) {
 		int num=(int)(Math.random()*10)+1;
@@ -99,7 +99,7 @@ public class Ex_if {
 ~~~
 
 - switch문
-~~~
+~~~java
 public class Ex_switch {
 	public static void main(String[] args) {
       int num=(int)(Math.random()*10)+1;
@@ -132,9 +132,9 @@ public class Ex_switch {
 ~~~
 
 ### 유클리드 호제법
-- 2개의 자연수 또는 정식의 최대공약수를 구하는 알고리즘의 하나이다. 호제법이란 말은 두 수가 서로 상대방 수를 나누어서 결국 원하는 수를 얻는 알고리즘을 나타낸다. 2개의 자연수 a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a>b), a와 b의 최대공약수는 b와 r의 최대공약수와 같다. 이 성질에 따라, b를 r로 나눈 나머지 r'를 구하고, 다시 r을 r'로 나눈 나머지를 구하는 과정을 반복하여 나머지가 0이 되었을 때 나누는 수가 a와 b의 최대공약수이다.
+> 2개의 자연수 또는 정식의 최대공약수를 구하는 알고리즘의 하나이다. 호제법이란 말은 두 수가 서로 상대방 수를 나누어서 결국 원하는 수를 얻는 알고리즘을 나타낸다. 2개의 자연수 a, b에 대해서 a를 b로 나눈 나머지를 r이라 하면(단, a>b), a와 b의 최대공약수는 b와 r의 최대공약수와 같다. 이 성질에 따라, b를 r로 나눈 나머지 r'를 구하고, 다시 r을 r'로 나눈 나머지를 구하는 과정을 반복하여 나머지가 0이 되었을 때 나누는 수가 a와 b의 최대공약수이다.
 
-~~~
+~~~java
 import java.util.Scanner;
 
 public class Euclidean {
