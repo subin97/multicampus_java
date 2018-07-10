@@ -10,7 +10,7 @@ public class Circle {
 	}
 	public Circle(int radius, Point center) {
 		this.radius = radius;
-		this.center = center;
+	  this.center = new Point(center.getX(), center.getY());
 	}
 	public int getRadius() {
 		return radius;
@@ -22,11 +22,12 @@ public class Circle {
 		return center;
 	}
 	public void setCenter(Point center) {
-    // this.center=center;
+    // this.center=center; - 주소값만 복사하는 shallow copy
 		this.center.setX(center.getX());
 		this.center.setY(center.getY());
     // c.center를 p로 설정하는 대신
     // c.center의 x, y를 p의 x, y값으로 설정
+    // 주소값 안의 실제 값을 복사하는 deep copy
 	}
 	@Override
 	public String toString() {

@@ -97,3 +97,55 @@ public class Test {
 	}
 }
 ~~~
+
+### 정적변수(클래스 변수, static variable)
+> 모든 객체를 통틀어서 하나만 있는 변수. 다른 인스턴스가 같은 변수에 접근함.
+
+- cf) 인스턴스 변수 : 객체마다 하나씩 있는 변수
+- 모든 객체가 공유해서 접근할 수 있는 변수 공간
+
+~~~java
+// Car.java
+public class Car {
+	private int speed;
+	private int mileage;
+	private String color;
+	public static int numberOfCars;
+}
+~~~
+~~~java
+// Cartest.java
+public class CarTest {
+	public static void main(String[] args) {
+		Car oppaCha=new Car();
+		System.out.println(Car.numberOfCars);
+    // 클래스 변수 -> 클래스 객체로 접근
+		Car appaCha=new Car(50, 1200,"white");
+		System.out.println(Car.numberOfCars);
+    // oppaCha.numberOfCars=appaCha.numberOfCars=Car.numberOfCars
+		System.out.println(oppaCha);
+		System.out.println(appaCha);
+	}
+}
+~~~
+
+### 정적 메소드(static method)
+> 객체의 상태값과 상관없는 동작을 하는 메소드를 구현할 때 사용. 객체를 생성하지 않고 사용할 수 있음.
+
+- ex) 수학과 관련된 메소드들
+
+~~~java
+double value = Math.sqrt(9.0);
+~~~
+
+### 상수
+> static 키워드가 붙은 변수는 프로그램이 종료될 때까지 사라지지 않는다.
+
+~~~java
+static final int MAX_SPEED=350;
+~~~
+
+### 예제- 복소수 연산
+> [자바에서의 실수 연산 오류](http://gwpark.tistory.com/1729)
+
+-> BigDecimal 사용하면 해결 가능
