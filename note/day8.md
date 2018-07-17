@@ -61,6 +61,7 @@ Time is money
   - ArrayIndexOutOfBoundException : 배열의 잘못된 인덱스에 참조
   - ClassCastException : 객체를 형변환할 때 잘못된 타입으로 형변환
   - NullPointerException : 참조값이 없는 참조변수에 .연산자를 통해 접근
+- catch는 위에서부터 검사하기 때문에 자식 예외클래스부터 catch문 작성
 
 ~~~java
 public class DivideByZero {
@@ -82,7 +83,7 @@ public class DivideByZero {
 ### finally 블록
 > 오류가 발생하였건 발생하지 않았건 항상 실행되어야 하는 코드
 
-- return문 때문에 필요함!
+- 함수 내에 try 구문 있을 경우 return문이 있더라도 finally 블록은 수행됌.
 - 자바에서는 예외도 객체로 처리함
 - 예외를 만들기 위한 클래스도 상속계층구조를 가짐
 - 부모타입 예외의 catch는 자식타입의 예외까지도 잡을 수 있음
