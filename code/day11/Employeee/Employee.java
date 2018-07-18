@@ -1,6 +1,8 @@
 package Employeee;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
 	private String name;
 	private int age;
 	private int salary;
@@ -14,9 +16,9 @@ public class Employee {
 		super();
 	}
 	public Employee(String name, int age, int salary) {
-		this.name=name;
-		this.age=age;
-		this.salary=salary;
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
 	}
 	public String getName() {
 		return name;

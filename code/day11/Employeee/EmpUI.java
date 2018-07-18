@@ -13,7 +13,7 @@ public class EmpUI {
 		while (menu != 0) {
 			printMenu();
 			menu = Integer.parseInt(sc.nextLine());
-			menu = Integer.parseInt(sc.nextLine());
+
 			if (menu == 1) {
 				Employee emp = new Employee();
 				emp = addEmp();
@@ -25,8 +25,10 @@ public class EmpUI {
 			else if (menu == 3) {
 				System.out.println("평균급여: "+em.avgSal());
 			}
-			else
+			else {
+				em.save();
 				break;
+			}
 		}
 	}
 	public void printMenu() {
