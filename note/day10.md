@@ -1,6 +1,6 @@
 # Day 10
 ***
-### Generics(p.670)
+### Generics
 > 다양한 타입의 객체들을 다루는 메서드나 컬렉션 클래스에 컴파일 시의 타입체크를 해주는 기능  
 C++ 에서의 template과 비슷한 기능을 함
 
@@ -36,12 +36,12 @@ public class BoxTest {
 Collection : 다수의 데이터, 즉 데이터 그룹
 Framework : 표준화된 프로그래밍 방식
 
-
 1. List
   - 순서가 있는 데이터의 집합
   - 데이터의 중복 허용
+  - 가변길이 배열
 2. Set
-  - 순서를 유지하지 않는 데이터의 집합.  
+  - 순서가 없는 데이터의 집합.  
   - 데이터의 중복을 허용하지 않음.  
   - 내가 넣은 순서와 상관없이 저장됨
 3. Map
@@ -137,9 +137,7 @@ class Account implements Comparable<Account>{
 			return 1;
 //		return this.id.compareTo(o.id);
 	}
-
 }
-
 
 public class ComparableTest {
 	public static void main(String[] args) {

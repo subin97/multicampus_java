@@ -1,10 +1,14 @@
 package bank;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class BankFunc {
-	private Account[] count = new Account[100]; // 기억용
-	private int accountCount = 0;
+	// private Account[] count = new Account[100];
+	// private int accountCount = 0;
+	List <Account> accountList = new ArrayList<>();
+	// 가변길이 배열 사용
 	private Scanner s = new Scanner(System.in);
 	private int menu = -1;
 
@@ -30,17 +34,19 @@ public class BankFunc {
 			case 6:
 				showAll();
 				break;
+			case 0:
+				break;
 			}
 		}
 	}
-	
+
 	private void interestFunc() {
 		System.out.print("계좌번호를 입력하세요: ");
 		String id = s.nextLine();
 		Account acc = new Account();
 		acc = searchAccount(id);
 		try {
-			new Thread(new InterestThread(acc)).start();		
+			new Thread(new InterestThread(acc)).start();
 		} catch(NullPointerException e) {
 			e.printStackTrace();
 		}
@@ -53,11 +59,13 @@ public class BankFunc {
 		String owner = s.nextLine();
 		System.out.print("금액를 입력하세요: ");
 		int balance = Integer.parseInt(s.nextLine());
-		count[accountCount] = new Account();
-		count[accountCount].setId(id);
-		count[accountCount].setOwner(owner);
-		count[accountCount].setBalance(balance);
-		accountCount++;
+		Account account = new Account(id, owner, balance);
+		accountList.add(account);
+		// count[accountCount] = new Account();
+		// count[accountCount].setId(id);
+		// count[accountCount].setOwner(owner);
+		// count[accountCount].setBalance(balance);
+		// accountCount++;
 	}
 
 	private void deposit() {
@@ -78,7 +86,6 @@ public class BankFunc {
 		} catch (NoAccountException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	private void withdraw() {
@@ -154,15 +161,15 @@ public class BankFunc {
 	}
 
 	private void showAll() {
-		for (int i = 0; i < accountCount; i++)
-			System.out.println(count[i]);
+		for (int i = 0; i < accountList.size(); i++)
+			System.out.println(accountList.get(i));
 	}
 
 	private Account searchAccount(String id) {
 		// 계좌 탐색 함수
-		for (int i = 0; i < accountCount; i++) {
-			if (id.equals(count[i].getId()))
-				return count[i];
+		for (int i = 0; i < accountList.size(); i++) {
+			if (accountList.get(i).getId().equals(id))
+				return accountList.get(i);
 		}
 		return null;
 	}
