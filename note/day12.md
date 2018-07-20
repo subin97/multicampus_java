@@ -167,13 +167,13 @@ where name='김영조';
 ~~~sql
 select *
 from professor
-where name='김%';
+where name like '김%';
 ~~~
 3. 이름이 두 글자인 사람 출력
 ~~~sql
 select *
 from professor
-where name='__';
+where name like '__';
 ~~~
 4. id에 s나 a 글자가 들어가는 사람을 출력
 ~~~sql
