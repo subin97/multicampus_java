@@ -63,3 +63,23 @@ update emp2 set hobby='음주가무' where hobby='술';
 ~~~sql
 update emp2 set emp_type='인턴직' where name like '이%' and emp_type='계약직';
 ~~~
+
+### group by
+> 그룹함수(sum, avg, max, min, ....) 등을 사용할 때 그룹의 기준을 잡아주어야 함  
+그룹의 기준이 되는 컬럼을 group by 뒤에 명시
+
+- 그룹 함수를 출력할 때 select문 뒤에 함께 올 수 있는 것은
+   1. 또 다른 그룹함수
+   2. 그룹의 기준이 되는 컬럼명  
+   **이외에 컬럼이름은 레벨이 다르기 때문에 같이 조회될 수 없음**
+
+### join
+> 두 개 이상의 테이블을 하나의 테이블로 만들어 한 번의 검색으로 여러 컬럼의 정보를 확인할 때 사용함
+
+[join 그림 한 장으로 이해하기](https://blog.naver.com/coniecual/221314987192)  
+[left join을 사용하여 해시태그 가져오기](https://1ilsang.blog.me/221231586062)
+- inner join
+- outer join
+  - left outer join
+  - right outer join
+  - full outer join
