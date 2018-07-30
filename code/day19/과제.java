@@ -15,12 +15,12 @@ public class 과제 {
 			insert(temp);
 			System.out.println(s);
 		}
-		System.out.println(findP());
+		System.out.println("P가 포함된 인덱스(없으면 -1): "+findP());
 		// P를 찾는 함수 호출
 	}
 	private static int findP() {
 		// TODO Auto-generated method stub
-		for(int i=0;i<=N;i++) {
+		for(int i=0;i<N;i++) {
 			if(s[i]=='P') {
 				return i;	// P가 포함된 index를 리턴
 			}
